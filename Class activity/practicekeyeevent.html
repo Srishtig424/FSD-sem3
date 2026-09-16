@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Events</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #form {
+            width: 500px;
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        #h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            margin: 20px 0 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+        }
+
+        input:hover {
+            border-color: #999;
+        }
+        p.input{
+            font: size 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div id="form">
+
+        <h1 id="h1">Keyboard Events</h1>
+
+        <p>onkeydown</p>
+        <input type="text" placeholder="Type something..." onkeydown="alert(this.value);">
+
+       (this.value) means is same message show in alert box that was entered in form -->
+
+        <!-- <p>onkeyup</p>
+        <input type="text" placeholder="Type something..." onkeyup="alert(this.value);">
+
+        <p>onkeypress</p>
+        <input type="text" placeholder="Type something..." onkeypress="alert(this.value);"> -->
+        <!-- onkeypress is same as onkeydown in insertion but different in delete when using special character -->
+
+    <!-- </div> --> 
+
+    <div id="form">
+        <h1 id="h1">Keyboard Events</h1>    
+        <p>onkeydown</p>
+        <input type="text" onkeydown="document.getElementById('form').style.background=this.value;">
+        <p>onkeyup </p>
+        <input type="text" onkeyup="document.getElementById('form').style.background=this.value;">
+        <p>onkeypress</p>
+        <input type="text" onkeypress="document.getElementById('form').style.background=this.value;">
+
+    </div>
+
+   
+
+</body>
+</html>
+
+
+
+<!-- keyboard event 
+1.keyup
+2.keydown
+3.keypress
+
+
+
+-->
